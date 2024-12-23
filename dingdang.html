@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: blueviolet;
+        }
+        #clear:hover,#add:hover,#subtract:hover,#multiply:hover,#Divide:hover{
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <p id="firstnum">Firstnum:</p>
+    <p id="secondnum">Secondnum:</p>
+    <button id="add" onclick="sum()">Add</button>
+    <button id="subtract" onclick="minus()">Subtract</button>
+    <button id="multiply" onclick="multiply()">Multiply</button>
+    <button id="Divide" onclick="divide()">Divide</button>
+    <button id="clear" onclick="clear1()">Clear</button>
+    <p id="answer"></p>
+    <script>
+        let num1=8;
+        let num2=2;
+        document.getElementById("firstnum").textContent+=8
+        document.getElementById("secondnum").textContent+=2
+        let ans=document.getElementById("answer");
+        function sum(){
+            let count=num1+num2
+            ans.textContent="Sum: "+count;
+        }
+        function minus(){
+            let count=num1-num2
+            ans.textContent="Sub: "+count;
+        }function multiply(){
+            let count=num1*num2
+            ans.textContent="Mul: "+count;
+        }function divide(){
+            let count=num1/num2
+            ans.textContent="Div: "+count;
+        }
+        function clear1(){
+            ans.textContent="";
+        }
+    </script>
+</body>
+</html>
